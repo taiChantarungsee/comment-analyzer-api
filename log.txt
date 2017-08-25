@@ -1,0 +1,68 @@
+ERROR:root:Fri Aug 25 18:01:59 2017. Database connection failed. Traceback:
+Traceback (most recent call last):
+  File "main.py", line 28, in <module>
+    database='SKU')
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\__init__.py", line 179, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\connection.py", line 95, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\abstracts.py", line 716, in connect
+    self._open_connection()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\connection.py", line 210, in _open_connection
+    self._ssl)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\connection.py", line 144, in _do_auth
+    self._auth_switch_request(username, password)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\connection.py", line 177, in _auth_switch_request
+    raise errors.get_exception(packet)
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'ENTER YOUR USERNAME HERE'@'localhost' (using password: YES)
+ERROR:root:Fri Aug 25 18:02:22 2017. Database connection failed. Traceback:
+Traceback (most recent call last):
+  File "main.py", line 28, in <module>
+    database='SKU')
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\__init__.py", line 179, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\connection.py", line 95, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\abstracts.py", line 716, in connect
+    self._open_connection()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\connection.py", line 210, in _open_connection
+    self._ssl)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\connection.py", line 144, in _do_auth
+    self._auth_switch_request(username, password)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\connection.py", line 177, in _auth_switch_request
+    raise errors.get_exception(packet)
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'ENTER YOUR USERNAME HERE'@'localhost' (using password: YES)
+ERROR:root:Fri Aug 25 18:04:37 2017. Database connection failed. Traceback:
+Traceback (most recent call last):
+  File "main.py", line 28, in <module>
+    database='SKU')
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\__init__.py", line 179, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\connection.py", line 95, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\abstracts.py", line 716, in connect
+    self._open_connection()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\connection.py", line 210, in _open_connection
+    self._ssl)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\connection.py", line 144, in _do_auth
+    self._auth_switch_request(username, password)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\connection.py", line 177, in _auth_switch_request
+    raise errors.get_exception(packet)
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'ENTER YOUR USERNAME HERE'@'localhost' (using password: YES)
+ERROR:root:Fri Aug 25 18:06:04 2017. Database connection failed. Traceback:
+Traceback (most recent call last):
+  File "main.py", line 28, in <module>
+    database='SKU')
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\__init__.py", line 179, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\connection.py", line 95, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\abstracts.py", line 716, in connect
+    self._open_connection()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\connection.py", line 210, in _open_connection
+    self._ssl)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\connection.py", line 144, in _do_auth
+    self._auth_switch_request(username, password)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\connection.py", line 177, in _auth_switch_request
+    raise errors.get_exception(packet)
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'ENTER YOUR USERNAME HERE'@'localhost' (using password: YES)
