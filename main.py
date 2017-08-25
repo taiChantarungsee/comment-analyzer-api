@@ -11,9 +11,9 @@ logging.basicConfig(filename='log.txt', level=logging.ERROR)
 #Set password and options first
 try :
 	tone_analyzer = ToneAnalyzerV3(
-	username='a724ff30-3000-49c2-8b93-af026b10e7c5',
-	password='GIAJflppODTp',
-	version='2016-05-19')
+	username='',
+	password='',
+	version='')
 except:
 	print('Tone analyzer credentials failed.')
 	logging.exception(time.strftime("%c")+ ". " + 'Tone analyzer credentials failed. Traceback:')
