@@ -1,11 +1,14 @@
 import json, logging, time, mysql.connector
 
-from urllib.request import Request, urlopen, URLError
+from flask import Flask
 from watson_developer_cloud import ToneAnalyzerV3
 from save import insert_data
 
 """Configure logging file. The program logs exceptions to an, external file, which
 will be useful when scaled. Logging.ERROR indicates the program has not been able to carry out its function."""
+
+app = Flask(__name__)
+
 logging.basicConfig(filename='log.txt', level=logging.ERROR)
 
 #Set password and options first
@@ -33,7 +36,10 @@ payload = {
 		'comment': 'I wish I was happy...really!',
 	}
 
-def main(payload):
+#Put all the above in a separate file?
+
+@app.route('/SKU-Retriever/api/v1.0/retrieve', methods=['POST'])
+def get_sku():
 	try:
 		print("SKU number is:" + " " + payload['name'])
 		print(json.dumps(tone_analyzer.tone(text=payload['comment']), indent=2))
