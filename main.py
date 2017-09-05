@@ -50,6 +50,8 @@ def get_sku():
 			print ('No SKU found. Error code:', e)
 			#log the error
 			logging.exception(time.strftime("%c")+ ". " + 'No SKU found. Traceback:')
+			return 400
+	return 201
 
 if __name__ == '__main__':
 	main(payload)
