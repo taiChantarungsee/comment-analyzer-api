@@ -66,3 +66,162 @@ Traceback (most recent call last):
   File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\connection.py", line 177, in _auth_switch_request
     raise errors.get_exception(packet)
 mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'ENTER YOUR USERNAME HERE'@'localhost' (using password: YES)
+ERROR:root:Wed Sep  6 14:01:49 2017. Tone analyzer credentials failed. Traceback:
+Traceback (most recent call last):
+  File "main.py", line 18, in <module>
+    password='ec0wKSjOyZb1')
+TypeError: __init__() missing 1 required positional argument: 'version'
+ERROR:root:Wed Sep  6 14:01:50 2017. Database connection failed. Traceback:
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\network.py", line 509, in open_connection
+    self.sock.connect(sockaddr)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 34, in <module>
+    database='SKU')
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\__init__.py", line 179, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\connection.py", line 95, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\abstracts.py", line 716, in connect
+    self._open_connection()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\connection.py", line 206, in _open_connection
+    self._socket.open_connection()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\network.py", line 512, in open_connection
+    errno=2003, values=(self.get_address(), _strioerror(err)))
+mysql.connector.errors.InterfaceError: 2003: Can't connect to MySQL server on '127.0.0.1:3306' (10061 No connection could be made because the target machine actively refused it)
+ERROR:root:Wed Sep  6 14:04:44 2017. Database connection failed. Traceback:
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\network.py", line 509, in open_connection
+    self.sock.connect(sockaddr)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 35, in <module>
+    database='SKU')
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\__init__.py", line 179, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\connection.py", line 95, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\abstracts.py", line 716, in connect
+    self._open_connection()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\connection.py", line 206, in _open_connection
+    self._socket.open_connection()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\network.py", line 512, in open_connection
+    errno=2003, values=(self.get_address(), _strioerror(err)))
+mysql.connector.errors.InterfaceError: 2003: Can't connect to MySQL server on '127.0.0.1:3306' (10061 No connection could be made because the target machine actively refused it)
+ERROR:root:Thu Sep  7 16:43:09 2017. Database connection failed. Traceback:
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\network.py", line 509, in open_connection
+    self.sock.connect(sockaddr)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 35, in <module>
+    database='SKU')
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\__init__.py", line 179, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\connection.py", line 95, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\abstracts.py", line 716, in connect
+    self._open_connection()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\connection.py", line 206, in _open_connection
+    self._socket.open_connection()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\network.py", line 512, in open_connection
+    errno=2003, values=(self.get_address(), _strioerror(err)))
+mysql.connector.errors.InterfaceError: 2003: Can't connect to MySQL server on '127.0.0.1:3306' (10061 No connection could be made because the target machine actively refused it)
+ERROR:root:Thu Sep  7 16:43:20 2017. Database connection failed. Traceback:
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\network.py", line 509, in open_connection
+    self.sock.connect(sockaddr)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 35, in <module>
+    database='SKU')
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\__init__.py", line 179, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\connection.py", line 95, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\abstracts.py", line 716, in connect
+    self._open_connection()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\connection.py", line 206, in _open_connection
+    self._socket.open_connection()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\network.py", line 512, in open_connection
+    errno=2003, values=(self.get_address(), _strioerror(err)))
+mysql.connector.errors.InterfaceError: 2003: Can't connect to MySQL server on '127.0.0.1:3306' (10061 No connection could be made because the target machine actively refused it)
+ERROR:root:Thu Sep  7 16:45:33 2017. Database connection failed. Traceback:
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\network.py", line 509, in open_connection
+    self.sock.connect(sockaddr)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 35, in <module>
+    database='SKU')
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\__init__.py", line 179, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\connection.py", line 95, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\abstracts.py", line 716, in connect
+    self._open_connection()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\connection.py", line 206, in _open_connection
+    self._socket.open_connection()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\network.py", line 512, in open_connection
+    errno=2003, values=(self.get_address(), _strioerror(err)))
+mysql.connector.errors.InterfaceError: 2003: Can't connect to MySQL server on '127.0.0.1:3306' (10061 No connection could be made because the target machine actively refused it)
+ERROR:root:Thu Sep  7 16:45:35 2017. Database connection failed. Traceback:
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\network.py", line 509, in open_connection
+    self.sock.connect(sockaddr)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 35, in <module>
+    database='SKU')
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\__init__.py", line 179, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\connection.py", line 95, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\abstracts.py", line 716, in connect
+    self._open_connection()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\connection.py", line 206, in _open_connection
+    self._socket.open_connection()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\network.py", line 512, in open_connection
+    errno=2003, values=(self.get_address(), _strioerror(err)))
+mysql.connector.errors.InterfaceError: 2003: Can't connect to MySQL server on '127.0.0.1:3306' (10061 No connection could be made because the target machine actively refused it)
+ERROR:root:Thu Sep  7 16:45:42 2017. Database connection failed. Traceback:
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\network.py", line 509, in open_connection
+    self.sock.connect(sockaddr)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 35, in <module>
+    database='SKU')
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\__init__.py", line 179, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\connection.py", line 95, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\abstracts.py", line 716, in connect
+    self._open_connection()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\connection.py", line 206, in _open_connection
+    self._socket.open_connection()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python35\lib\site-packages\mysql\connector\network.py", line 512, in open_connection
+    errno=2003, values=(self.get_address(), _strioerror(err)))
+mysql.connector.errors.InterfaceError: 2003: Can't connect to MySQL server on '127.0.0.1:3306' (10061 No connection could be made because the target machine actively refused it)
