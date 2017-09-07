@@ -4,19 +4,18 @@
 import mysql.connector, json
 
 try:
-	database = mysql.connector.connect(user='ENTER YOUR USERNAME HERE', password='ENTER YOUR PASSWORD HERE',
+	database = mysql.connector.connect(user='root', password='millieiscute2',
 	database='SKU')
+	if not database:
+		connection = mysql.connector.connect(user='root', password='millieiscute2')
+		cursorA = connection.cursor()
+		cursorA.execute('CREATE DATABASE SKU;')
 except:
 	print('Database connection failed.')
 
 def create_data():	
 	cursorA = database.cursor()
 	cursorB = database.cursor()
-
-	if not database:
-		connection = mysql.connector.connect(user='root', password='millieiscute2')
-		cursorC = connection.cursor()
-		cursorC.execute('CREATE DATABASE SKU;')
 	
 	# Create a simple table to store comments by SKU
 	TABLES = (
