@@ -1,64 +1,52 @@
 #!/usr/bin/env python
 import json, logging, time, mysql.connector
 
-from flask import Flask, jsonify
+from flask import Flask, jsonify, make_response
 from watson_developer_cloud import ToneAnalyzerV3
 from save import insert_data
 
-"""Configure logging file. The program logs exceptions to an, external file, which
+"""In order to start the server, please run the db.py script to set up the SKU database in Mysql, and you need to 
+place your username and password in that script and in save.py as well. This way of connecting will have to refactored for 
+production use, but will work for development. Please also insert your blue mix credentials at lines 22-23 below.
+
+Below we configure the logging file. The program logs exceptions to an, external file, which
 will be useful when scaled. Logging.ERROR indicates the program has not been able to carry out its function."""
 
 app = Flask(__name__)
 
 logging.basicConfig(filename='log.txt', level=logging.ERROR)
 
-#Set password and options first
+#Set up tone analyzer credentials.
 try :
 	tone_analyzer = ToneAnalyzerV3(
-	username='5b55cac9-1576-4669-ac69-c1d8358c0015',
-	password='ec0wKSjOyZb1',
+	username='USERNAME',
+	password='PASSWORD',
 	version='2016-09-20')
 except:
 	print('Tone analyzer credentials failed.')
 	logging.exception(time.strftime("%c")+ ". " + 'Tone analyzer credentials failed. Traceback:')
 
-"""Set up database connections. Program uses a mysql database to store comments, choosen for its reliability.
-Please run the db.py script to set up this database in Mysql, and replace the parameters below with your username
-and password. This way of connecting will have to refactored for production use, but will work for development.
-{
-  "url": "https://gateway.watsonplatform.net/tone-analyzer/api",
-  "username": "5b55cac9-1576-4669-ac69-c1d8358c0015",
-  "password": "ec0wKSjOyZb1"
-}"""
-
-try:
-	database = mysql.connector.connect(user='root', password='millieiscute2',
-	database='SKU')
-except:
-	print('Database connection failed.')
-	logging.exception(time.strftime("%c")+ ". " + 'Database connection failed. Traceback:')
-
+# Example of a comment, that will be used to show the service works when a client accesses the API.
 payload = {
 		'name': 'F12T-MMM-RS',
-		'comment': 'I am feeling excited',
+		'comment': 'I am feeling down',
 	}
 
-#Put all the above in a separate file? And don't forget to not include or clean up the log files first.
-
-@app.route('/SKU-Retriever/api/v1.0/retrieve', methods=['GET'])
+@app.route('/SKU-Retriever/api/v0.1/retrieve', methods=['GET'])
 def update_sku():
 	try:
 		print("SKU number is:" + " " + payload['name'])
 		response = tone_analyzer.tone(text=payload['comment'])
 		insert_data(payload)
 		print("Comment analyzed and saved sucessfully!")
-	except KeyError as e: #expand on this bit and error handling, tests for all modules and so on tomorrow.
+	except KeyError as e:
 			print ('No SKU found. Error code:', e)
 			#log the error
 			logging.exception(time.strftime("%c")+ ". " + 'No SKU found. Traceback:')
 			return
 	return jsonify(response)
 
+#implement error handler for displaying an error message in a 404 response.
 @app.errorhandler(404)
 def not_found(error):
     return make_response(jsonify({'error': 'Not found'}), 404)

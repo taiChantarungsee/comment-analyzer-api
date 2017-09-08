@@ -4,10 +4,10 @@
 import mysql.connector, json
 
 try:
-	database = mysql.connector.connect(user='root', password='millieiscute2',
+	database = mysql.connector.connect(user='ENTER USERNAME', password='ENTER PASSWORD',
 	database='SKU')
 	if not database:
-		connection = mysql.connector.connect(user='root', password='millieiscute2')
+		connection = mysql.connector.connect(user='ENTER USERNAME', password='ENTER PASSWORD')
 		cursorA = connection.cursor()
 		cursorA.execute('CREATE DATABASE SKU;')
 except:

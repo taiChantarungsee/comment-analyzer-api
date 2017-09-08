@@ -3,7 +3,7 @@ import mysql.connector, json
 #functions for saving database data
 
 def insert_data(json):	
-	database = mysql.connector.connect(user='root', password='millieiscute2',
+	database = mysql.connector.connect(user='ENTER USERNAME', password='ENTER PASSWORD',
 	database='SKU')
 	cursor = database.cursor()
 
